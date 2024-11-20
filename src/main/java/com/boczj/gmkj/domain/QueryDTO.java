@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class QueryDTO {
     private String testFlag;
-    private String newDate;
+    private String twicechange;
 }

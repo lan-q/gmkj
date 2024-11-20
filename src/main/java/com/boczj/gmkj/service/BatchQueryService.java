@@ -21,15 +21,8 @@ public class BatchQueryService {
     AsyncTask asyncTask;
 
     public HashMap countAndCode(QueryDTO queryDTO){
-        HashMap<String, String> ans = new HashMap<>();
-        if (queryDTO.getTestFlag().equals("1")){
-            ans.put("code","20241111");
-            ans.put("count","9");
-        }else{
-            ans.put("code","20242222");
-            ans.put("count","20");
-        }
-        return ans;
+        HashMap<String, String> ands = new HashMap<>();
+        return ands;
     }
 
     public void pdfGen(QueryDTO queryDTO,HashMap ans) throws InterruptedException {
@@ -39,12 +32,6 @@ public class BatchQueryService {
         HashMap<String, String> dataBO = new HashMap<>();
         dataBO.put("test1","1");
         dataBO.put("test2","2");
-        List<HashMap> dataBolist = new ArrayList<>();
-        if (queryDTO.getTestFlag().equals("1")){
-            dataBolist.add(dataBO);
-        }
-
-
         for (int i = 0;i<Num;i++){
             asyncTask.pdfGen(i);
         }
